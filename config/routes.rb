@@ -1,4 +1,13 @@
 Yeoncan::Application.routes.draw do
+  root "paginas_estaticas#inicio"
+
+  match '/idea', to: 'paginas_estaticas#idea', via: 'get'
+  match '/proyectos', to: 'paginas_estaticas#proyectos', via: 'get'
+  match '/somos', to: 'paginas_estaticas#somos', via: 'get'
+  match '/contacto', to: 'paginas_estaticas#contacto', via: 'get'
+  match '/fases', to: 'paginas_estaticas#fases', via: 'get'
+
+  match '/registro', to: 'usuarios#new', via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
