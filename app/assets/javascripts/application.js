@@ -11,6 +11,21 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+
+
+  /*Acordion de fases*/
+  $( "#accordion" ).accordion();
+
+  /*Barra de progreso*/
+  var hoy = new Date();
+
+  $( "#progressbar" ).progressbar({
+      value: parseInt( (( parseInt(hoy.getMonth()+1)*30 + parseInt(hoy.getDate()) )*100) / 365)
+    });
+})
